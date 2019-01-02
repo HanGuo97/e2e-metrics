@@ -250,7 +250,7 @@ def run_mteval(data_ref, data_sys, data_src):
                                           '-f', mteval_log_file], stderr=subprocess.STDOUT)
     nist = float(re.search(r'NIST score = ([0-9.]+)', mteval_out.decode("utf-8")).group(1))
     bleu = float(re.search(r'BLEU score = ([0-9.]+)', mteval_out.decode("utf-8")).group(1))
-    print(mteval_out, file=sys.stderr)
+    # print(mteval_out, file=sys.stderr)
 
     # delete the temporary directory
     print('Removing temp directory', file=sys.stderr)
